@@ -41,6 +41,10 @@ describe('arabicToRoman', () => {
     expect(arabicToRoman(48)).toBe('XLVIII');
   });
 
+  it('should convert 49 to XLIX', () => {
+    expect(arabicToRoman(49)).toBe('XLIX');
+  });
+
   it('should convert 50 to L', () => {
     expect(arabicToRoman(50)).toBe('L');
   });
