@@ -12,4 +12,12 @@ describe('arabicToRoman', () => {
   it('should convert 3 to III', () => {
     expect(arabicToRoman(3)).toBe('III');
   });
+
+  it('should convert 4 to IV', () => {
+    expect(arabicToRoman(4)).toBe('IV');
+  });
+
+  it('should convert 5 to V', () => {
+    expect(arabicToRoman(5)).toBe('V');
+  });
 });
