@@ -1,4 +1,22 @@
+/**
+ * Converts an Arabic number to its Roman numeral representation.
+ * Supports numbers from 1 to 3999.
+ *
+ * @param num - The Arabic number to convert
+ * @returns The Roman numeral string representation
+ * @throws Error if the number is not in the valid range (1-3999)
+ *
+ * @example
+ * arabicToRoman(4) // returns "IV"
+ * arabicToRoman(1994) // returns "MCMXCIV"
+ */
 export function arabicToRoman(num: number): string {
+  // Validation
+  if (!Number.isInteger(num) || num < 1 || num > 3999) {
+    throw new Error('Number must be an integer between 1 and 3999');
+  }
+
+  // Mapping of Arabic values to Roman numerals in descending order
   const values = [
     { value: 1000, numeral: 'M' },
     { value: 900, numeral: 'CM' },
@@ -18,6 +36,7 @@ export function arabicToRoman(num: number): string {
   let result = '';
   let remaining = num;
 
+  // Iterate through values and build the Roman numeral string
   for (const { value, numeral } of values) {
     while (remaining >= value) {
       result += numeral;

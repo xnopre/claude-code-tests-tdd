@@ -76,4 +76,19 @@ describe('arabicToRoman', () => {
   it('should convert 3999 to MMMCMXCIX', () => {
     expect(arabicToRoman(3999)).toBe('MMMCMXCIX');
   });
+
+  describe('input validation', () => {
+    it('should throw error for numbers less than 1', () => {
+      expect(() => arabicToRoman(0)).toThrow('Number must be an integer between 1 and 3999');
+      expect(() => arabicToRoman(-5)).toThrow('Number must be an integer between 1 and 3999');
+    });
+
+    it('should throw error for numbers greater than 3999', () => {
+      expect(() => arabicToRoman(4000)).toThrow('Number must be an integer between 1 and 3999');
+    });
+
+    it('should throw error for non-integer numbers', () => {
+      expect(() => arabicToRoman(3.14)).toThrow('Number must be an integer between 1 and 3999');
+    });
+  });
 });
