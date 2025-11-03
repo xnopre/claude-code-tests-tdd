@@ -13,6 +13,10 @@ describe('Roman Numerals Converter', () => {
     expect(toRoman(3)).toBe('III');
   });
 
+  test('converts 4 to IV', () => {
+    expect(toRoman(4)).toBe('IV');
+  });
+
   test('converts 5 to V', () => {
     expect(toRoman(5)).toBe('V');
   });
