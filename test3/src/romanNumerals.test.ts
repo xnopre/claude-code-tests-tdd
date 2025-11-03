@@ -12,4 +12,8 @@ describe('Roman Numerals Converter', () => {
   test('converts 3 to III', () => {
     expect(toRoman(3)).toBe('III');
   });
+
+  test('converts 5 to V', () => {
+    expect(toRoman(5)).toBe('V');
+  });
 });
