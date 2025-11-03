@@ -1,3 +1,3 @@
 export function toRoman(num: number): string {
-  return "I";
+  return "I".repeat(num);
 }
