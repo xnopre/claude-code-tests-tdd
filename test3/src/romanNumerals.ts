@@ -1,6 +1,26 @@
 export function toRoman(num: number): string {
   let result = "";
 
+  while (num >= 1000) {
+    result += "M";
+    num -= 1000;
+  }
+
+  if (num >= 900) {
+    result += "CM";
+    num -= 900;
+  }
+
+  if (num >= 500) {
+    result += "D";
+    num -= 500;
+  }
+
+  if (num >= 400) {
+    result += "CD";
+    num -= 400;
+  }
+
   while (num >= 100) {
     result += "C";
     num -= 100;

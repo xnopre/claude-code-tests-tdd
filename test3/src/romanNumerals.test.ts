@@ -52,4 +52,20 @@ describe('Roman Numerals Converter', () => {
   test('converts 100 to C', () => {
     expect(toRoman(100)).toBe('C');
   });
+
+  test('converts 400 to CD', () => {
+    expect(toRoman(400)).toBe('CD');
+  });
+
+  test('converts 500 to D', () => {
+    expect(toRoman(500)).toBe('D');
+  });
+
+  test('converts 900 to CM', () => {
+    expect(toRoman(900)).toBe('CM');
+  });
+
+  test('converts 1000 to M', () => {
+    expect(toRoman(1000)).toBe('M');
+  });
 });
