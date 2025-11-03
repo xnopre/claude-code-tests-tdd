@@ -1,9 +1,45 @@
 export function toRoman(num: number): string {
-  if (num === 5) {
-    return "V";
+  let result = "";
+
+  while (num >= 100) {
+    result += "C";
+    num -= 100;
   }
+
+  if (num >= 90) {
+    result += "XC";
+    num -= 90;
+  }
+
+  if (num >= 50) {
+    result += "L";
+    num -= 50;
+  }
+
+  if (num >= 40) {
+    result += "XL";
+    num -= 40;
+  }
+
+  while (num >= 10) {
+    result += "X";
+    num -= 10;
+  }
+
+  if (num === 9) {
+    return result + "IX";
+  }
+
+  if (num >= 5) {
+    result += "V";
+    num -= 5;
+  }
+
   if (num === 4) {
-    return "IV";
+    return result + "IV";
   }
-  return "I".repeat(num);
+
+  result += "I".repeat(num);
+
+  return result;
 }
