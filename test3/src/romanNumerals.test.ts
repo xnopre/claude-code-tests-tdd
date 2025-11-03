@@ -68,4 +68,16 @@ describe('Roman Numerals Converter', () => {
   test('converts 1000 to M', () => {
     expect(toRoman(1000)).toBe('M');
   });
+
+  test('converts 58 to LVIII', () => {
+    expect(toRoman(58)).toBe('LVIII');
+  });
+
+  test('converts 1994 to MCMXCIV', () => {
+    expect(toRoman(1994)).toBe('MCMXCIV');
+  });
+
+  test('converts 3749 to MMMDCCXLIX', () => {
+    expect(toRoman(3749)).toBe('MMMDCCXLIX');
+  });
 });
