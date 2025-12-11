@@ -1,14 +1,16 @@
 # Step 1
 
-> Nous avons 2 tableaux ordonnés contenant des nombres :
-> const a = [1, 7, 8, 12, 23, 55, 67, 89]
-> const b = [7, 12, 23, 105, 112, 130, 141]
-> Ecris une fonction qui permet d'obtenir la liste des nombres communs à ces 2 tableaux.
-> Exemple :
-> const result = [7, 12, 23]
+Prompt :
+```text
+Nous avons 2 tableaux ordonnés contenant des nombres :
+const a = [1, 7, 8, 12, 23, 55, 67, 89]
+const b = [7, 12, 23, 105, 112, 130, 141]
+Ecris une fonction qui permet d'obtenir la liste des nombres communs à ces 2 tableaux.
+Exemple :
+const result = [7, 12, 23]
+```
 
-## Output Claude Code
-
+Output Claude Code :
 ```text
 ⏺ Parfait ! J'ai implémenté la fonction en suivant la méthode TDD :
 
@@ -27,10 +29,12 @@
 
 # Step 2
 
-> Dans le résultat final, je ne veux pas les doublons
+Prompt :
+```text
+Dans le résultat final, je ne veux pas les doublons
+```
 
-## Output Claude Code
-
+Output Claude Code :
 ```text
 ⏺ Parfait ! J'ai modifié la fonction en TDD pour éviter les doublons :
 
@@ -49,11 +53,13 @@
 
 # Step 3
 
-> Par contre, si un nombre est 2 fois dans une liste et 3 fois dans l'autre, il faut que le résultat 
-> final contienne ces 2 nombres
+Prompt :
+```text
+Par contre, si un nombre est 2 fois dans une liste et 3 fois dans l'autre, il faut que le résultat 
+final contienne ces 2 nombres
+```
 
-## Output Claude Code
-
+Output Claude Code :
 ```text
 ⏺ Parfait ! La fonction fonctionne maintenant correctement avec le comportement souhaité.
 
@@ -73,10 +79,12 @@
 
 # Step 4
 
-> Je veux que la méthode ait un paramètre permettant de choisir si on veut garder les doublons ou pas 
+Prompt :
+```text
+Je veux que la méthode ait un paramètre permettant de choisir si on veut garder les doublons ou pas
+``` 
 
-## Output Claude Code
-
+Output Claude Code :
 ```text
 ⏺ Parfait ! J'ai ajouté le paramètre keepDuplicates en suivant la méthode TDD.
 
