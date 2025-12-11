@@ -26,6 +26,7 @@
 ```
 
 # Step 2
+
 > Dans le résultat final, je ne veux pas les doublons
 
 ## Output Claude Code
@@ -46,3 +47,26 @@
   La fonction retourne maintenant uniquement les nombres communs uniques entre les deux tableaux.
 ```
 
+# Step 3
+
+> Par contre, si un nombre est 2 fois dans une liste et 3 fois dans l'autre, il faut que le résultat 
+> final contienne ces 2 nombres
+
+## Output Claude Code
+
+```text
+⏺ Parfait ! La fonction fonctionne maintenant correctement avec le comportement souhaité.
+
+  Modification apportée : src/commonNumbers.test.ts:13-20
+  Le test vérifie maintenant que la fonction garde le minimum des occurrences communes :
+  - a = [1, 5, 5, 7, 10, 10, 12] : 5×2, 10×2
+  - b = [5, 5, 7, 10, 12, 12, 15] : 5×2, 10×1, 12×2
+  - Résultat : [5, 5, 7, 10, 12] → 5 apparaît min(2,2)=2 fois, 10 apparaît min(2,1)=1 fois
+
+  Code final : src/commonNumbers.ts:7-10
+  L'algorithme des deux pointeurs garde naturellement le bon nombre d'occurrences. Quand on trouve un nombre commun, on l'ajoute et on avance les deux pointeurs, garantissant ainsi le minimum d'occurrences.
+
+  Résultat des tests : ✅ Les 2 tests passent
+  - Premier cas : nombres sans doublons [7, 12, 23]
+  - Second cas : avec occurrences multiples [5, 5, 7, 10, 12]
+```
