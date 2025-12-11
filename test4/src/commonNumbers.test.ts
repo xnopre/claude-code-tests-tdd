@@ -10,12 +10,21 @@ describe('findCommonNumbers', () => {
     expect(result).toEqual([7, 12, 23]);
   });
 
-  it('devrait garder le minimum des occurrences communes', () => {
+  it('devrait garder le minimum des occurrences communes par défaut', () => {
     const a = [1, 5, 5, 7, 10, 10, 12];
     const b = [5, 5, 7, 10, 12, 12, 15];
 
     const result = findCommonNumbers(a, b);
 
     expect(result).toEqual([5, 5, 7, 10, 12]);
+  });
+
+  it('ne devrait pas garder les doublons quand keepDuplicates est false', () => {
+    const a = [1, 5, 5, 7, 10, 10, 12];
+    const b = [5, 5, 7, 10, 12, 12, 15];
+
+    const result = findCommonNumbers(a, b, false);
+
+    expect(result).toEqual([5, 7, 10, 12]);
   });
 });

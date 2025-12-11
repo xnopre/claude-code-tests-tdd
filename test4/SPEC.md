@@ -70,3 +70,30 @@
   - Premier cas : nombres sans doublons [7, 12, 23]
   - Second cas : avec occurrences multiples [5, 5, 7, 10, 12]
 ```
+
+# Step 4
+
+> Je veux que la méthode ait un paramètre permettant de choisir si on veut garder les doublons ou pas 
+
+## Output Claude Code
+
+```text
+⏺ Parfait ! J'ai ajouté le paramètre keepDuplicates en suivant la méthode TDD.
+
+  Nouveau test ajouté : src/commonNumbers.test.ts:22-29
+  Le test vérifie qu'avec keepDuplicates = false, on obtient [5, 7, 10, 12] au lieu de [5, 5, 7, 10, 12].
+
+  Modification de la fonction : src/commonNumbers.ts:1
+  - Ajout du paramètre keepDuplicates: boolean = true (valeur par défaut à true)
+  - Logique ligne 8 : si keepDuplicates est true, on ajoute toutes les occurrences communes
+  - Si keepDuplicates est false, on vérifie que le nombre n'est pas déjà présent en dernière position avant de l'ajouter
+
+  Résultat des tests : ✅ Les 3 tests passent
+  - Premier cas : nombres sans doublons [7, 12, 23]
+  - Second cas (par défaut) : avec occurrences multiples [5, 5, 7, 10, 12]
+  - Troisième cas (keepDuplicates = false) : uniquement les nombres uniques [5, 7, 10, 12]
+
+  Vous pouvez maintenant utiliser :
+  - findCommonNumbers(a, b) ou findCommonNumbers(a, b, true) pour garder les doublons
+  - findCommonNumbers(a, b, false) pour ne pas garder les doublons
+```
